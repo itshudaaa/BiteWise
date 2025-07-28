@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>BiteWise – Spots Menu</title>
+
+    <!-- External CSS file for styling -->
+    <link rel="stylesheet" href="assets/css/food-spots.css" />
+
+    <!-- External JavaScript file for interactivity -->
+    <script defer src="assets/js/food-spots.js"></script>
+  </head>
+
+  <body>
+    <!-- Page background wrapper -->
+    <div class="page-bg">
+      
+      <!-- ================= NAVIGATION BAR ================= -->
+      <nav class="navbar">
+        <div class="nav-container">
+
+          <!-- Website Logo (links to homepage) -->
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.svg" alt="Logo" class="logo-img" />
+          </a>
+
+          <!-- Hamburger menu -->
+          <button class="hamburger" id="hamburger">☰</button>
+
+          <!-- Navigation links list -->
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="spots.html">Spots</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- ================= MAIN CONTENT ================= -->
+      <main class="container">
+
+        <!-- Section: Mood Selector -->
+        <section class="mood-section">
+          <h2 id="moodTitle">Let your cravings match your feelings</h2>
+          <p id="moodDescription">
+            Choose a mood to find the perfect food spot for you!
+          </p>
+
+          <!-- Mood selection buttons -->
+          <div class="mood-buttons">
+            <button class="mood-btn" data-mood="sad">😢 Sad</button>
+            <button class="mood-btn" data-mood="happy">😁 Happy</button>
+            <button class="mood-btn" data-mood="angry">😡 Angry</button>
+            <button class="mood-btn" data-mood="stressed">😰 Stressed</button>
+            <button class="mood-btn" data-mood="bored">🥱 Bored</button>
+          </div>
+          
+          <!-- Message shown when a mood is selected -->
+          <p id="moodMessage" class="mood-message"></p>
+
+          <!-- Reset button to show all spots -->
+          <button id="resetBtn" class="reset-btn">🔄️️Show All Spots</button>
+        </section>
+
+        <!-- Section: Results for filtered or all food spots -->
+        <section class="results-section">
+          <h3 id="resultsTitle">All Food Spots</h3>
+          
+          <!-- Dynamic spot results will be shown here -->
+          <div id="filteredResults" class="spots-grid">
+          </div>
+        </section>
+      </main>
+
+      <!-- ================= FOOTER ================= -->
+      <footer class="footer">
+        <p>&copy; Made by foodies @ Sunway University ❤️ | All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

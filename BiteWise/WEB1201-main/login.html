@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- === Meta Info === -->
+  <meta charset="UTF-8">
+  <title>Login / Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- === External CSS and JS === -->
+  <link rel="stylesheet" href="assets/css/auth.css">
+  <script src="assets/js/login.js" defer></script>
+</head>
+
+<body>
+
+<div class="page-bg">
+
+  <!-- === Navbar Section === -->
+  <nav class="navbar">
+    <div class="nav-container">
+      
+      <!-- Logo -->
+      <a class="logo" href="index.html">
+        <img class="logo-img" src="assets/images/logo.svg">
+      </a>
+
+      <!-- Hamburger Icon -->
+      <button class="hamburger" id="hamburger">☰</button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="spots.html">Spots</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- === Main Auth Container === -->
+  <main class="container">
+
+    <!-- === Toggle Between Sign Up / Login === -->
+    <section class="auth-tabs">
+      <button id="showSignup">Sign Up</button>
+      <button id="showLogin">Login</button>
+    </section>
+
+    <!-- === Sign Up Form Section === -->
+    <section id="signupForm" class="auth-form" style="display: block;">
+      <h2>Create Account</h2>
+      <form id="signup-form" action="submit.html" method="POST">
+
+        <!-- Username Field -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="e.g., ariabrookyln">
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="yourname@email.com">
+
+        <!-- Password Field -->
+        <label for="signupPassword">Password:</label>
+        <div style="display: flex; align-items: center;">
+          <input type="password" id="signupPassword" name="password" required>
+          <button type="button" class="toggle-password" data-target="signupPassword">👁️</button>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <label for="signupConfirmPassword">Confirm Password:</label>
+        <div style="display: flex; align-items: center;">
+          <input type="password" id="signupConfirmPassword" name="confirm-password" required>
+          <button type="button" class="toggle-password" data-target="signupConfirmPassword">👁️</button>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+
+    <!-- === Login Form Section === -->
+    <section id="loginSection" class="auth-form" style="display: none;">
+      <h2>Welcome Back</h2>
+      <form id="login-form">
+
+        <!-- Email Input -->
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" name="email" required>
+
+        <!-- Password Input -->
+        <label for="loginPassword">Password:</label>
+        <div style="display: flex; align-items: center;">
+          <input type="password" id="loginPassword" name="password" required>
+          <button type="button" class="toggle-password" data-target="loginPassword">👁️</button>
+        </div>
+
+        <!-- Role Selection -->
+        <label for="role">Login As:</label>
+        <select id="role" name="role" required>
+          <option value="">-- Select your role --</option>
+          <option value="customer">Customer</option>
+          <option value="vendor">Vendor</option>
+        </select>
+
+        <!-- Vendor Code (only for vendors) -->
+        <div id="vendor-code-section" style="display: none;">
+          <label for="vendor-code">Vendor Code:</label>
+          <input type="text" id="vendor-code" name="vendor-code">
+        </div>
+
+        <!-- Vendor Password (only for vendors) -->
+        <div id="vendor-password-section" style="display: none;">
+          <label for="vendor-password">Vendor Password:</label>
+          <input type="password" id="vendor-password" name="vendor-password">
+          <label>
+            <input type="checkbox" onclick="togglePassword('vendor-password')"> Show Password
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- === Footer === -->
+  <footer class="footer">
+    <p>&copy; Made by foodies @ Sunway University ❤️ | All Rights Reserved</p>
+  </footer>
+
+</div>
+</body>
+</html>

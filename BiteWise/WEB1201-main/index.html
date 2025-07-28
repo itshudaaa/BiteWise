@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- === Meta Information === -->
+  <meta charset="UTF-8">
+  <title>BiteWise – Your Mood, Your Food</title>
+
+  <!-- === External Stylesheet & JavaScript === -->
+  <link rel="stylesheet" href="assets/css/index.css">
+  <script src="assets/js/hero.js" defer></script>
+</head>
+
+<body>
+
+  <!-- === Navbar Section === -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="Logo" class="logo-img" />
+      </a>
+
+      <!-- Hamburger Menu (Mobile) -->
+      <button class="hamburger" id="hamburger">☰</button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="spots.html">Spots</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- === Hero Section with Typing Animation === -->
+  <section class="hero-section">
+    <div class="hero-content">
+      
+      <!-- Dynamic Text Animation -->
+      <div class="typewriter-container">
+        <h1>
+          <span class="static-text">I feel</span> 
+          <span id="typed-text"></span>
+        </h1>
+      </div>
+
+      <!-- Welcome Text -->
+      <div class="hero-text">
+        <h1>Welcome to BiteWise!</h1>
+        <p>Your Mood, Your Food. Let us recommend you something tasty based on how you feel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Who We Are Section (Team Members) === -->
+  <section class="who-we-are">
+    <h2 style="text-align: center; margin-top: 3rem; color: rgb(0, 0, 0);">Who We Are</h2>
+    
+    <!-- Team Photo Grid -->
+    <div class="team-photos" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+      
+      <!-- Huda -->
+      <div style="position: relative; width: 250px; height: 250px;">
+        <img src="assets/images/huda.png" alt="Huda" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2); position: relative; z-index: 1;" />
+        <svg viewBox="0 0 250 250" width="250" height="250"
+             style="position: absolute; top: 0; left: 0; z-index: 2; pointer-events: none;">
+          <defs>
+            <path id="circlePathHuda" d="M125,125 m-110,0 a110,110 0 1,1 220,0 a110,110 0 1,1 -220,0"/>
+          </defs>
+          <text font-size="14" fill="white">
+            <textPath href="#circlePathHuda" startOffset="0%">
+              Huda • 19123900 • Creative Lead • 
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <!-- Sheena -->
+      <div style="position: relative; width: 250px; height: 250px;">
+        <img src="assets/images/sheena.png" alt="Sheena" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2); position: relative; z-index: 1;" />
+        <svg viewBox="0 0 250 250" width="250" height="250"
+             style="position: absolute; top: 0; left: 0; z-index: 2; pointer-events: none;">
+          <defs>
+            <path id="circlePathSheena" d="M125,125 m-110,0 a110,110 0 1,1 220,0 a110,110 0 1,1 -220,0"/>
+          </defs>
+          <text font-size="14" fill="white">
+            <textPath href="#circlePathSheena" startOffset="0%">
+              Sheena • 24053993 • Developer • 
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <!-- Tess -->
+      <div style="position: relative; width: 250px; height: 250px;">
+        <img src="assets/images/tess1.png" alt="Tess" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2); position: relative; z-index: 1;" />
+        <svg viewBox="0 0 250 250" width="250" height="250"
+             style="position: absolute; top: 0; left: 0; z-index: 2; pointer-events: none;">
+          <defs>
+            <path id="circlePathTess" d="M125,125 m-110,0 a110,110 0 1,1 220,0 a110,110 0 1,1 -220,0"/>
+          </defs>
+          <text font-size="14" fill="white">
+            <textPath href="#circlePathTess" startOffset="0%">
+              Tess • 24050668 • Developer • 
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <!-- Natsai -->
+      <div style="position: relative; width: 250px; height: 250px;">
+        <img src="assets/images/natsai.png" alt="Natsai" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2); position: relative; z-index: 1;" />
+        <svg viewBox="0 0 250 250" width="250" height="250"
+             style="position: absolute; top: 0; left: 0; z-index: 2; pointer-events: none;">
+          <defs>
+            <path id="circlePathNatsai" d="M125,125 m-110,0 a110,110 0 1,1 220,0 a110,110 0 1,1 -220,0"/>
+          </defs>
+          <text font-size="14" fill="white">
+            <textPath href="#circlePathNatsai" startOffset="0%">
+              Natsai • 24037913 • Developer • 
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- === About Section === -->
+  <section class="about-section" id="about-section" style="display: flex; justify-content: center; align-items: center; margin-bottom: 3rem; margin-top: 3rem;">
+    <div style="background: rgba(255, 238, 213, 0.92); border-radius: 18px; max-width: 700px; width: 80%; padding: 2.5rem 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: center;">
+      
+      <!-- About Content -->
+      <h2 style="margin-top: 0;">About Us</h2>
+      <p>
+        BiteWise is a mood-based food recommendation platform that helps you discover what to eat based on how you're feeling. Whether you're happy, tired, sad, or just bored, we match your mood to meals that hit the spot.
+      </p>
+      <p>
+        Our mission is to make food discovery more personal, playful, and emotionally intuitive. We believe food is more than just fuel it's comfort, celebration, and connection. At BiteWise, we want every bite to match your vibe, making each meal a small moment of joy.
+      </p>
+
+      <!-- Location Map -->
+      <h2 style="margin-top: 0;">Where are we located?</h2>
+      <div style="margin-top: 1rem; position: relative;"></div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.022963817613!2d101.60440131475744!3d3.067527697753789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b1e1b6e7e4d%3A0x7c6e2c1b9b419add!2sSunway%20University!5e0!3m2!1sen!2smy!4v1683031234567!5m2!1sen!2smy"
+          width="100%"
+          height="300"
+          style="border:0; border-radius: 12px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Sunway University Location"
+        ></iframe>
+    </div>
+  </section>
+
+  <!-- === Footer Section === -->
+  <footer class="footer">
+    <p>&copy; Made by foodies @ Sunway University ❤️ | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
