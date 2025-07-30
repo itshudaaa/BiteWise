@@ -1,5 +1,4 @@
 // === FORM VALIDATION SCRIPT FOR CONTACT PAGE ===
-// This script now relies on HTML5 form validation only.
 // If everything is okay, it shows a success message and redirects to submit.html.
 
 document.addEventListener("DOMContentLoaded", () => {
