@@ -1,6 +1,5 @@
 // === FORM VALIDATION SCRIPT FOR CONTACT PAGE ===
-// This script checks the form inputs before allowing submission.
-// It ensures that the name, email, and message fields are properly filled.
+// This script now relies on HTML5 form validation only.
 // If everything is okay, it shows a success message and redirects to submit.html.
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,62 +9,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailInput = document.getElementById("email");
   const messageInput = document.getElementById("message");
 
-  // === Create a <p> element to display feedback messages ===
-  const feedback = document.createElement("p");
-  form.appendChild(feedback); // Add feedback message below form
-
   // === Form submission event handler ===
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Stop form from submitting normally
+    if (!form.checkValidity()) {
+      return;
+    }
 
-    // === Get trimmed values from inputs ===
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
+    // === Get trimmed message for extra length check ===
     const message = messageInput.value.trim();
-
-    // === Simple email validation pattern ===
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-    // === Validation checks ===
-    if (name.length < 2) {
-      feedback.textContent = "❌ Please enter your full name.";
-      feedback.className = "error"; 
-      return;
-    }
-
-    if (!email.match(emailPattern)) {
-      feedback.textContent = "❌ Please enter a valid email address.";
-      feedback.className = "error";
-      return;
-    }
-
     if (message.length < 10) {
-      feedback.textContent = "❌ Your message must be at least 10 characters.";
-      feedback.className = "error";
+      event.preventDefault();
+      alert("Your message must be at least 10 characters.");
       return;
     }
-
-    // === If all inputs are valid ===
-    feedback.textContent = "✅ Message sent successfully!";
-    feedback.className = "success";
-
-    // === Clear form fields ===
-    nameInput.value = "";
-    emailInput.value = "";
-    messageInput.value = "";
 
     // === Redirect to success page ===
+    event.preventDefault(); 
+    alert("Message sent successfully!");
     setTimeout(() => {
-      window.location.href = "submit.html"; 
-    }, 2000);
+      window.location.href = "submit.html";
+    }, 500);
   });
 
   // === HAMBURGER MENU TOGGLE ===
-
   const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks"); 
+  const navLinks = document.getElementById("navLinks");
 
   hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show"); 
+    navLinks.classList.toggle("show");
   });
 });
