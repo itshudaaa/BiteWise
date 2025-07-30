@@ -31,7 +31,7 @@
     <main class="container">
       <section>
         <h2>Get in Touch</h2>
-        <form id="contact-form" action="submit.html" method="post">
+        <form id="contact-form" action="submit.html" method="post" novalidate>
           <label for="name">Name:</label>
           <input
             type="text"
@@ -50,6 +50,7 @@
             required
             placeholder="example@domain.com"
           />
+          <span id="emailError" class="error-message" style="color: red; font-size: 0.9em;"></span>
 
           <label for="message">Message:</label>
           <textarea
